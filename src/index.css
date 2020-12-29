@@ -1,0 +1,166 @@
+* {
+    background-color: black;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    user-select: none;
+}
+
+body {
+
+    max-width: 900px;
+    margin: auto;
+
+}
+h1 {
+    text-align: right;
+    font-weight: 900;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 100;
+}
+h1, h2 {
+    text-shadow: 3px 3px 1px coral;
+    font-size: 40px;
+    line-height: 46px;
+}
+
+
+div {
+    overflow: hidden;
+}
+
+form {
+    text-align: right;
+}
+
+input[type='text']{
+    font-size: 20px;
+    line-height: 40px;
+    border-radius: 15px;
+    outline: none;
+    padding: 0 10px;
+    text-align: right;
+}
+
+input[type='text']:focus{
+    border-radius: 15px;
+    border: 1px dotted coral;
+}
+
+
+.task {
+    height: 35px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 6px double black;
+}
+
+label {
+    background: inherit;
+    color: inherit;
+
+}
+
+.task-body{
+    width: 720px;
+    height: 35px;
+    line-height: 35px;
+    font-size: 25px;
+    background: inherit;
+    color: inherit;
+}
+
+.task:hover{
+    border-bottom: 6px double black;
+    border-radius: 14px;
+    background: coral;
+    color: black;
+}
+
+button {
+    height: 35px;
+    width: 87px;
+    font-size: 14px;
+    text-align: right;
+    border: 6px double coral;
+    border-radius: 14px;
+    margin: 0 10px;
+}
+
+button:hover {
+    border: 6px double black;
+    color: coral;
+    background: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+
+
+/*Часть с чек-боксами я честно стащил :)
+
+/* для элемента input c type="checkbox" */
+.custom-checkbox>input {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+}
+
+/* для элемента label, связанного с .custom-checkbox */
+.custom-checkbox>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+}
+
+/* создание в label псевдоэлемента before со следующими стилями */
+.custom-checkbox>span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid #ffffff;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+}
+
+/* стили при наведении курсора на checkbox */
+.custom-checkbox>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #ffffff;
+}
+
+/* стили для активного чекбокса (при нажатии на него) */
+.custom-checkbox>input:not(:disabled):active+span::before {
+    background-color: #000000;
+    border-color: #ffffff;
+}
+
+/* стили для чекбокса, находящегося в фокусе */
+.custom-checkbox>input:focus+span::before {
+    box-shadow: 0 0 0 0.2rem rgb(255, 135, 0);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.custom-checkbox>input:focus:not(:checked)+span::before {
+    border-color: #ffffff;
+}
+
+/* стили для чекбокса, находящегося в состоянии checked */
+.custom-checkbox>input:checked+span::before {
+    border-color: #ffffff;
+    background-color: #ffffff;
+    background-image: url("https://image.flaticon.com/icons/png/512/16/16508.png");
+}
+
+/* стили для чекбокса, находящегося в состоянии disabled */
+.custom-checkbox>input:disabled+span::before {
+    background-color: #ffffff;
+}
