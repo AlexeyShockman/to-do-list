@@ -128,7 +128,6 @@ class ToDoList extends React.Component {
                         <label className="custom-checkbox">
                         <input
                             type='checkbox'
-                            value='value-1'
                             checked={task.done}
                             onChange={() => {
                                 this.props.handleTaskDone(task.position)
